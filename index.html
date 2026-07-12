@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Leaving Shade for Everyone</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#111;
+
+    color:white;
+
+    font-family:Georgia, serif;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    text-align:center;
+
+}
+
+.container{
+
+    max-width:650px;
+
+    padding:40px;
+
+}
+
+h1{
+
+    font-size:3.8rem;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+h2{
+
+    font-weight:normal;
+
+    color:#d8d8d8;
+
+    margin-bottom:70px;
+
+    line-height:1.5;
+
+}
+
+.quote{
+
+    min-height:90px;
+
+    color:#cccccc;
+
+    font-style:italic;
+
+    font-size:1.3rem;
+
+    line-height:1.8;
+
+    white-space:pre-line;
+
+}
+
+.cursor{
+
+    display:inline-block;
+
+    animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+50%{
+
+opacity:0;
+
+}
+
+}
+
+button{
+
+    margin-top:70px;
+
+    padding:18px 42px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:.8s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+button.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+Leaving Shade<br>
+for Everyone
+</h1>
+
+<h2>
+A Tribute to My Mother-in-Law,<br>
+Zhang Yuzhen
+</h2>
+
+<div id="quote" class="quote"></div>
+
+<button id="beginButton">
+Begin Reading
+</button>
+
+</div>
+
+<script>
+
+const text =
+`She grew from poor and difficult soil,
+
+yet she gave shade to everyone around her.`;
+
+const quote=document.getElementById("quote");
+
+const button=document.getElementById("beginButton");
+
+let i=0;
+
+function type(){
+
+    if(i<text.length){
+
+        quote.innerHTML=text.substring(0,i+1)+"<span class='cursor'>|</span>";
+
+        i++;
+
+        let speed=30;
+
+        if(text[i]===",") speed=250;
+
+        if(text[i]==="\n") speed=600;
+
+        setTimeout(type,speed);
+
+    }
+
+    else{
+
+        quote.innerHTML=text;
+
+        setTimeout(()=>{
+
+            button.classList.add("show");
+
+        },900);
+
+    }
+
+}
+
+setTimeout(type,1000);
+
+button.onclick=function(){
+
+    alert("The reader is coming soon...");
+
+}
+
+</script>
+
+</body>
+
+</html>
