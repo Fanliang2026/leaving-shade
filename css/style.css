@@ -1,0 +1,244 @@
+/*
+--------------------------------------------------
+Project Shade
+Version 0.1.0 — Seed
+
+The technology should disappear.
+The person should remain.
+--------------------------------------------------
+*/
+
+/* ========== Reset ========== */
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    font-size:16px;
+}
+
+body{
+    background:#000;
+    color:#F5F3ED;
+
+    font-family:"Source Sans 3",sans-serif;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+/* ========== Layout ========== */
+
+.hero{
+
+    width:min(92%,680px);
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+/* ========== Title ========== */
+
+.title-block{
+
+    margin-bottom:3rem;
+
+}
+
+h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(3rem,7vw,5rem);
+
+    font-weight:400;
+
+    line-height:1;
+
+    letter-spacing:.02em;
+
+}
+
+h1 span{
+
+    display:block;
+
+    margin-top:.35rem;
+
+    font-size:50%;
+
+    font-weight:300;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    color:#cfcfcf;
+
+}
+
+/* ========== Subtitle ========== */
+
+.subtitle{
+
+    margin-top:2.4rem;
+
+    color:#c8c8c8;
+
+    font-size:1rem;
+
+    letter-spacing:.08em;
+
+}
+
+.name{
+
+    margin-top:1rem;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2rem;
+
+    font-weight:300;
+
+}
+
+/* ========== Quote ========== */
+
+.quote{
+
+    margin:2rem 0;
+
+    max-width:520px;
+
+    min-height:4rem;
+
+}
+
+.quote p{
+
+    color:#ddd;
+
+    line-height:1.8;
+
+    font-size:1.05rem;
+
+}
+
+/* ========== Seed ========== */
+
+.tree{
+
+    margin:2rem 0;
+
+}
+
+#seed{
+
+    width:80px;
+
+    height:auto;
+
+}
+
+#seedBody{
+
+    fill:#8f6b38;
+
+}
+
+#root,
+#stem,
+#leaf{
+
+    stroke:#d8d2c5;
+
+    stroke-width:2.2;
+
+    fill:none;
+
+    stroke-linecap:round;
+
+}
+
+/* ========== Button ========== */
+
+.button-area{
+
+    margin-top:2.5rem;
+
+}
+
+#startButton{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:#F5F3ED;
+
+    border:1px solid #666;
+
+    padding:.95rem 2.2rem;
+
+    border-radius:999px;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+    font-size:.8rem;
+
+    transition:.35s;
+
+}
+
+#startButton:hover{
+
+    background:#F5F3ED;
+
+    color:#000;
+
+    border-color:#F5F3ED;
+
+}
+
+/* ========== Mobile ========== */
+
+@media (max-width:600px){
+
+    h1{
+
+        font-size:2.8rem;
+
+    }
+
+    .subtitle{
+
+        font-size:.92rem;
+
+    }
+
+    .quote{
+
+        width:92%;
+
+    }
+
+}
