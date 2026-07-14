@@ -1,94 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Leaving Shade for Everyone</title>
-    <meta name="description" content="A tribute to Zhang Yuzhen">
 
-    <!-- Google Fonts -->
+    <meta name="description"
+        content="A tribute to Zhang Yuzhen through the memories of her family.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Source+Sans+3:wght@300;400;600&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
-<main class="hero">
+    <main class="cover">
 
-    <section class="title-block">
+        <header class="hero">
 
-        <h1>
-            Leaving Shade
-            <span>for Everyone</span>
-        </h1>
+            <h1 class="title">
+                Leaving Shade
+                <span>for Everyone</span>
+            </h1>
 
-        <p class="subtitle">
-            A Tribute to My Mother-in-Law
-        </p>
+            <p class="subtitle">
+                A Tribute to My Mother-in-Law
+            </p>
 
-        <p class="name">
-            Zhang Yuzhen
-        </p>
+            <p class="author">
+                Zhang Yuzhen
+            </p>
 
-        <p class="years">
-            1940–2022
-        </p>
+        </header>
 
-    </section>
 
-    <section class="quote">
+        <section class="symbol">
 
-        <p id="quoteText"></p>
+            <!-- The seed will become the tree -->
 
-    </section>
+            <div id="seed" aria-hidden="true"></div>
 
-    <section class="tree">
+        </section>
 
-        <svg id="seed" width="120" height="160" viewBox="0 0 120 160">
 
-            <line id="root"
-                  x1="60"
-                  y1="82"
-                  x2="60"
-                  y2="82" />
+        <section class="quote">
 
-            <ellipse id="seedBody"
-                     cx="60"
-                     cy="72"
-                     rx="8"
-                     ry="11" />
+            <p id="quoteText"></p>
 
-            <line id="stem"
-                  x1="60"
-                  y1="62"
-                  x2="60"
-                  y2="62" />
+        </section>
 
-            <path id="leaf"
-                  d="M60 44
-                     C72 44 74 56 60 60
-                     C52 56 52 48 60 44" />
 
-        </svg>
+        <footer class="enter">
 
-    </section>
+            <a href="reader.html" id="startButton">
 
-    <section class="button-area">
+                Begin Reading
 
-        <a href="reader.html" id="startButton">
-            Begin Reading
-        </a>
+            </a>
 
-    </section>
+        </footer>
 
-</main>
+    </main>
 
-<script src="js/app.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
+
 </html>
