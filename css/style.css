@@ -1,22 +1,87 @@
-/* ==========================================
-   Hero
-========================================== */
+/*
+--------------------------------------------------
+Project Shade
+Version 0.1.0 — Seed
+
+The technology should disappear.
+The person should remain.
+--------------------------------------------------
+*/
+
+/* ========== Reset ========== */
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    font-size:16px;
+}
+
+body{
+    background:#000;
+    color:#F5F3ED;
+
+    font-family:"Source Sans 3",sans-serif;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+/* ========== Layout ========== */
 
 .hero{
 
+    width:min(92%,680px);
+
+    text-align:center;
+
     display:flex;
+
     flex-direction:column;
+
     align-items:center;
 
 }
 
-.subtitle{
+/* ========== Title ========== */
 
-    margin-top:3.5rem;
+.title-block{
 
-    font-family:"Source Sans 3",sans-serif;
+    margin-bottom:3rem;
 
-    font-size:.95rem;
+}
+
+h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(3rem,7vw,5rem);
+
+    font-weight:400;
+
+    line-height:1;
+
+    letter-spacing:.02em;
+
+}
+
+h1 span{
+
+    display:block;
+
+    margin-top:.35rem;
+
+    font-size:50%;
 
     font-weight:300;
 
@@ -24,85 +89,99 @@
 
     text-transform:uppercase;
 
-    color:#BEBEBE;
+    color:#cfcfcf;
 
 }
 
-.author{
+/* ========== Subtitle ========== */
 
-    margin-top:1.2rem;
+.subtitle{
+
+    margin-top:2.4rem;
+
+    color:#c8c8c8;
+
+    font-size:1rem;
+
+    letter-spacing:.08em;
+
+}
+
+.name{
+
+    margin-top:1rem;
 
     font-family:"Cormorant Garamond",serif;
 
-    font-size:1.8rem;
+    font-size:2rem;
 
-    font-weight:400;
-
-    color:#ECECEC;
+    font-weight:300;
 
 }
 
-/* ==========================================
-   Seed
-========================================== */
+/* ========== Quote ========== */
 
-.symbol{
+.quote{
 
-    margin-top:5rem;
-    height:80px;
+    margin:2rem 0;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    max-width:520px;
+
+    min-height:4rem;
+
+}
+
+.quote p{
+
+    color:#ddd;
+
+    line-height:1.8;
+
+    font-size:1.05rem;
+
+}
+
+/* ========== Seed ========== */
+
+.tree{
+
+    margin:2rem 0;
 
 }
 
 #seed{
 
-    width:8px;
-    height:8px;
+    width:80px;
 
-    border-radius:50%;
-
-    background:var(--accent);
-
-    opacity:.9;
+    height:auto;
 
 }
 
-/* ==========================================
-   Quote
-========================================== */
+#seedBody{
 
-.quote{
-
-    margin-top:3rem;
-
-    max-width:500px;
+    fill:#8f6b38;
 
 }
 
-#quoteText{
+#root,
+#stem,
+#leaf{
 
-    font-family:"Cormorant Garamond",serif;
+    stroke:#d8d2c5;
 
-    font-size:1.35rem;
+    stroke-width:2.2;
 
-    line-height:1.8;
+    fill:none;
 
-    color:#D6D6D6;
-
-    min-height:90px;
+    stroke-linecap:round;
 
 }
 
-/* ==========================================
-   Button
-========================================== */
+/* ========== Button ========== */
 
-.enter{
+.button-area{
 
-    margin-top:5rem;
+    margin-top:2.5rem;
 
 }
 
@@ -110,55 +189,59 @@
 
     display:inline-block;
 
-    padding:.95rem 2.8rem;
+    text-decoration:none;
 
-    border:1px solid rgba(255,255,255,.25);
+    color:#F5F3ED;
+
+    border:1px solid #666;
+
+    padding:.95rem 2.2rem;
 
     border-radius:999px;
 
-    color:#F2F2F2;
-
-    text-decoration:none;
-
     letter-spacing:.12em;
 
-    font-size:.9rem;
+    text-transform:uppercase;
 
-    transition:.35s ease;
+    font-size:.8rem;
+
+    transition:.35s;
 
 }
 
 #startButton:hover{
 
-    border-color:var(--accent);
+    background:#F5F3ED;
 
-    color:white;
+    color:#000;
+
+    border-color:#F5F3ED;
 
 }
 
-/* ==========================================
-   Mobile
-========================================== */
+/* ========== Mobile ========== */
 
 @media (max-width:600px){
 
-    .title{
+    h1{
 
-        font-size:3.3rem;
+        font-size:2.8rem;
 
     }
 
     .subtitle{
 
-        font-size:.8rem;
-
-        letter-spacing:.14em;
+        font-size:.92rem;
 
     }
 
-    #quoteText{
+    .quote{
 
-        font-size:1.15rem;
+        width:92%;
+
+    }
+
+}
 
         line-height:1.7;
 
