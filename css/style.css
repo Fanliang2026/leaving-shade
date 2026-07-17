@@ -1,87 +1,165 @@
-/*
---------------------------------------------------
-Project Shade
-Version 0.1.0 — Seed
+/* ==========================================
+   Project Shade
+   Version 1.0
+   Leaving Shade for Everyone
+========================================== */
 
-The technology should disappear.
-The person should remain.
---------------------------------------------------
-*/
 
-/* ========== Reset ========== */
+/* ==========================================
+   CSS VARIABLES
+========================================== */
 
-*,
-*::before,
-*::after{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+:root{
+
+    --bg:#000000;
+
+    --paper:#F5F3ED;
+
+    --white:#FFFFFF;
+
+    --text:#D2D2D2;
+
+    --muted:#A9A9A9;
+
+    --gold:#B89247;
+
+    --border:rgba(255,255,255,.18);
+
+    --max-width:620px;
+
+    --transition:.35s ease;
+
 }
+
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
 
 html{
+
+    scroll-behavior:smooth;
+
     font-size:16px;
+
 }
 
+
+
 body{
-    background:#000;
-    color:#F5F3ED;
+
+    background:var(--bg);
+
+    color:var(--paper);
 
     font-family:"Source Sans 3",sans-serif;
 
     min-height:100vh;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
     overflow:hidden;
+
 }
 
-/* ========== Layout ========== */
 
-.hero{
 
-    width:min(92%,680px);
+/* ==========================================
+   COVER
+========================================== */
 
-    text-align:center;
+.cover{
+
+    width:min(90%,var(--max-width));
+
+    min-height:100vh;
+
+    margin:auto;
 
     display:flex;
 
     flex-direction:column;
 
+    justify-content:center;
+
     align-items:center;
 
-}
-
-/* ========== Title ========== */
-
-.title-block{
-
-    margin-bottom:3rem;
+    text-align:center;
 
 }
 
-h1{
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+
+    width:100%;
+
+}
+
+
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.title{
 
     font-family:"Cormorant Garamond",serif;
 
-    font-size:clamp(3rem,7vw,5rem);
+    font-size:clamp(3.5rem,8vw,5.8rem);
 
     font-weight:400;
 
-    line-height:1;
+    color:var(--white);
 
-    letter-spacing:.02em;
+    line-height:.92;
 
 }
 
-h1 span{
+
+
+.title span{
 
     display:block;
 
-    margin-top:.35rem;
+    margin-top:.55rem;
 
-    font-size:50%;
+    font-size:48%;
+
+    font-weight:300;
+
+    letter-spacing:.08em;
+
+    color:#D0D0D0;
+
+}
+
+
+
+/* ==========================================
+   SUBTITLE
+========================================== */
+
+.subtitle{
+
+    margin-top:3rem;
+
+    font-size:.95rem;
 
     font-weight:300;
 
@@ -89,25 +167,17 @@ h1 span{
 
     text-transform:uppercase;
 
-    color:#cfcfcf;
+    color:var(--muted);
 
 }
 
-/* ========== Subtitle ========== */
 
-.subtitle{
 
-    margin-top:2.4rem;
+/* ==========================================
+   AUTHOR
+========================================== */
 
-    color:#c8c8c8;
-
-    font-size:1rem;
-
-    letter-spacing:.08em;
-
-}
-
-.name{
+.author{
 
     margin-top:1rem;
 
@@ -115,135 +185,79 @@ h1 span{
 
     font-size:2rem;
 
-    font-weight:300;
+    font-weight:400;
+
+    color:var(--paper);
 
 }
 
-/* ========== Quote ========== */
 
-.quote{
 
-    margin:2rem 0;
+/* ==========================================
+   SEED
+========================================== */
 
-    max-width:520px;
+.symbol{
 
-    min-height:4rem;
+    height:90px;
 
-}
+    display:flex;
 
-.quote p{
+    justify-content:center;
 
-    color:#ddd;
+    align-items:center;
 
-    line-height:1.8;
-
-    font-size:1.05rem;
+    margin-top:4rem;
 
 }
 
-/* ========== Seed ========== */
 
-.tree{
-
-    margin:2rem 0;
-
-}
 
 #seed{
 
-    width:80px;
+    width:8px;
 
-    height:auto;
+    height:8px;
 
-}
+    border-radius:50%;
 
-#seedBody{
+    background:var(--gold);
 
-    fill:#8f6b38;
-
-}
-
-#root,
-#stem,
-#leaf{
-
-    stroke:#d8d2c5;
-
-    stroke-width:2.2;
-
-    fill:none;
-
-    stroke-linecap:round;
+    box-shadow:0 0 12px rgba(184,146,71,.45);
 
 }
 
-/* ========== Button ========== */
 
-.button-area{
 
-    margin-top:2.5rem;
+/* ==========================================
+   QUOTE
+========================================== */
 
-}
+.quote{
 
-#startButton{
+    width:100%;
 
-    display:inline-block;
+    max-width:520px;
 
-    text-decoration:none;
-
-    color:#F5F3ED;
-
-    border:1px solid #666;
-
-    padding:.95rem 2.2rem;
-
-    border-radius:999px;
-
-    letter-spacing:.12em;
-
-    text-transform:uppercase;
-
-    font-size:.8rem;
-
-    transition:.35s;
+    margin-top:2rem;
 
 }
 
-#startButton:hover{
 
-    background:#F5F3ED;
 
-    color:#000;
+#quoteText{
 
-    border-color:#F5F3ED;
+    font-family:"Cormorant Garamond",serif;
 
-}
+    font-size:1.4rem;
 
-/* ========== Mobile ========== */
+    line-height:1.8;
 
-@media (max-width:600px){
+    color:#D8D8D8;
 
-    h1{
-
-        font-size:2.8rem;
-
-    }
-
-    .subtitle{
-
-        font-size:.92rem;
-
-    }
-
-    .quote{
-
-        width:92%;
-
-    }
+    min-height:110px;
 
 }
-
-        line-height:1.7;
 
     }
 
