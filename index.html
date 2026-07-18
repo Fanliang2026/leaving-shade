@@ -24,7 +24,7 @@
 <body>
 
     <main class="cover">
-
+       <div class="content">
         <header class="hero">
 
             <h1 class="title">
@@ -54,22 +54,37 @@
 
         <section class="quote">
 
-            <p id="quoteText"></p>
+         <p
+    id="quoteText"
+    aria-live="polite"
+></p>
 
         </section>
 
 
         <footer class="enter">
 
-            <a href="reader.html" id="startButton">
+            <a
+    href="reader.html"
+    id="startButton"
+    class="hidden"
+>
 
-                Begin Reading
+    Begin Reading
 
-            </a>
+</a>
 
         </footer>
-
+      </div>
     </main>
+<noscript>
+
+    <p class="noscript-message">
+        This website works best with JavaScript enabled.
+    </p>
+
+</noscript>
+
 
     <script src="js/app.js"></script>
 
