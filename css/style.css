@@ -81,21 +81,6 @@ body{
 
 .cover{
 
-   /* ==========================================
-   CONTENT
-   ========================================== */
-
-.content{
-
-    width:100%;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-}
     width:min(90%,var(--max-width));
 
     min-height:100vh;
@@ -111,6 +96,23 @@ body{
     align-items:center;
 
     text-align:center;
+
+}
+
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.content{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
 
 }
 
@@ -193,7 +195,7 @@ body{
 
 .author{
 
-    margin-top:8rem;
+    margin-top:.8rem;
 
     font-family:"Cormorant Garamond",serif;
 
@@ -270,9 +272,5 @@ body{
     color:#D8D8D8;
 
     min-height:110px;
-
-}
-
-    }
 
 }
