@@ -81,6 +81,21 @@ body{
 
 .cover{
 
+   /* ==========================================
+   CONTENT
+   ========================================== */
+
+.content{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
     width:min(90%,var(--max-width));
 
     min-height:100vh;
