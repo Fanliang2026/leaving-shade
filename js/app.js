@@ -74,10 +74,14 @@ else{
    START PAGE
 ========================================== */
 
-seed.classList.add("grow");
+setTimeout(() => {
+
+    seed.classList.add("grow");
+
+}, 500);
 
 setTimeout(() => {
 
     typeQuote(quote, quoteText);
 
-}, 1600);
+}, 2200);
