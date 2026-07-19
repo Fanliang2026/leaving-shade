@@ -30,6 +30,13 @@ document.querySelector(".title");
 
 const subtitle =
 document.querySelector(".subtitle");
+
+const author =
+document.querySelector(".author");
+
+const seed =
+document.getElementById("seed");
+
 /* ==========================================
    TYPEWRITER
 ========================================== */
@@ -57,8 +64,8 @@ function typeQuote(text, element, speed = 45) {
     type();
 
 }
-const author =
-document.querySelector(".author");
+/* ==========================================
+   START PAGE
+========================================== */
 
-const seed =
-document.getElementById("seed");
+typeQuote(quote, quoteText);
