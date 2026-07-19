@@ -74,11 +74,15 @@ else{
    START PAGE
 ========================================== */
 
-setTimeout(() => {
+requestAnimationFrame(() => {
 
-    seed.classList.add("grow");
+    setTimeout(() => {
 
-}, 500);
+        seed.classList.add("grow");
+
+    }, 500);
+
+});
 
 setTimeout(() => {
 
