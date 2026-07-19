@@ -30,7 +30,33 @@ document.querySelector(".title");
 
 const subtitle =
 document.querySelector(".subtitle");
+/* ==========================================
+   TYPEWRITER
+========================================== */
 
+function typeQuote(text, element, speed = 45) {
+
+    let index = 0;
+
+    element.textContent = "";
+
+    function type() {
+
+        if (index < text.length) {
+
+            element.textContent += text.charAt(index);
+
+            index++;
+
+            setTimeout(type, speed);
+
+        }
+
+    }
+
+    type();
+
+}
 const author =
 document.querySelector(".author");
 
