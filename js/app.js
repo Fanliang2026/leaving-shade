@@ -51,14 +51,20 @@ function typeQuote(text, element, speed = 45) {
 
         if (index < text.length) {
 
-            element.textContent += text.charAt(index);
+    element.textContent += text.charAt(index);
 
-            index++;
+    index++;
 
-            setTimeout(type, speed);
+    setTimeout(type, speed);
 
-        }
+}
+else{
 
+    startButton.classList.remove("hidden");
+
+    startButton.classList.add("show");
+
+}
     }
 
     type();
