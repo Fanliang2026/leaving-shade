@@ -73,5 +73,11 @@ else{
 /* ==========================================
    START PAGE
 ========================================== */
+
 seed.classList.add("grow");
-typeQuote(quote, quoteText);
+
+setTimeout(() => {
+
+    typeQuote(quote, quoteText);
+
+}, 1600);
