@@ -230,7 +230,7 @@ body{
 
 
 #seed{
-
+    position:relative;
     width:8px;
 
     height:8px;
@@ -243,7 +243,83 @@ body{
 
 }
 
+/* ==========================================
+   SPROUT
+========================================== */
 
+#sprout{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:4px;
+
+    width:2px;
+
+    height:0;
+
+    background:#7FA35A;
+
+    transform:translateX(-50%);
+
+    transform-origin:bottom center;
+
+    transition:height 1.4s ease;
+
+}
+
+#sprout::before,
+#sprout::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-5px;
+
+    width:7px;
+
+    height:4px;
+
+    background:#7FA35A;
+
+    border-radius:50%;
+
+    opacity:0;
+
+    transition:opacity .6s ease;
+
+}
+
+#sprout::before{
+
+    left:-6px;
+
+    transform:rotate(-30deg);
+
+}
+
+#sprout::after{
+
+    right:-6px;
+
+    transform:rotate(30deg);
+
+}
+
+#seed.grow #sprout{
+
+    height:16px;
+
+}
+
+#seed.grow #sprout::before,
+#seed.grow #sprout::after{
+
+    opacity:1;
+
+}
 
 /* ==========================================
    QUOTE
