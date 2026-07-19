@@ -73,5 +73,5 @@ else{
 /* ==========================================
    START PAGE
 ========================================== */
-
+seed.classList.add("grow");
 typeQuote(quote, quoteText);
