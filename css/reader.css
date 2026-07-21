@@ -1,1 +1,89 @@
+/* ==========================================
+   Project Shade
+   reader.css
+   Version 1.0
+========================================== */
 
+
+/* ==========================================
+   CSS VARIABLES
+========================================== */
+
+:root{
+
+    --bg:#000000;
+
+    --paper:#F5F3ED;
+
+    --white:#FFFFFF;
+
+    --text:#D2D2D2;
+
+    --muted:#A9A9A9;
+
+    --gold:#B89247;
+
+    --max-width:760px;
+
+}
+
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+
+html{
+
+    font-size:16px;
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+    background:var(--bg);
+
+    color:var(--paper);
+
+    font-family:"Source Sans 3",sans-serif;
+
+    min-height:100vh;
+
+}
+/* ==========================================
+   READER
+========================================== */
+
+.reader{
+
+    width:min(92%,var(--max-width));
+
+    margin:0 auto;
+
+    padding:5rem 0 7rem;
+
+}
+
+
+
+.chapter{
+
+    width:100%;
+
+}
