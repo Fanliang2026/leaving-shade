@@ -87,3 +87,42 @@ body{
     width:100%;
 
 }
+/* ==========================================
+   CHAPTER HEADER
+========================================== */
+
+.chapter-header{
+
+    text-align:center;
+
+    margin-bottom:5rem;
+
+}
+
+.chapter-number{
+
+    font-size:.9rem;
+
+    letter-spacing:.30em;
+
+    text-transform:uppercase;
+
+    color:var(--gold);
+
+    margin-bottom:1rem;
+
+}
+
+.chapter-title{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(3rem,6vw,4.6rem);
+
+    font-weight:300;
+
+    color:var(--paper);
+
+    line-height:1.1;
+
+}
