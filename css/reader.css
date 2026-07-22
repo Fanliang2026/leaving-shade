@@ -57,7 +57,7 @@ html{
 
 body{
 
-    background:var(--bg);
+    background:var(--bg); 
 
     color:var(--paper);
 
@@ -72,14 +72,13 @@ body{
 
 .reader{
 
-    width:min(92%,var(--max-width));
+    width:min(88%,700px);
 
     margin:0 auto;
 
     padding:5rem 0 7rem;
 
 }
-
 
 
 .chapter{
@@ -124,5 +123,26 @@ body{
     color:var(--paper);
 
     line-height:1.1;
+
+}
+/* ==========================================
+   CHAPTER CONTENT
+========================================== */
+
+.chapter-content{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:1.8rem;
+
+    line-height:1.9;
+
+    color:var(--paper);
+
+}
+
+.chapter-content p{
+
+    margin-bottom:2rem;
 
 }
