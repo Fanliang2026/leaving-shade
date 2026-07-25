@@ -89,3 +89,12 @@ setTimeout(() => {
     typeQuote(quote, quoteText);
 
 }, 2200);
+/* ==========================================
+   BUTTON
+========================================== */
+
+startButton.addEventListener("click", () => {
+
+    window.location.href = "language.html";
+
+});
