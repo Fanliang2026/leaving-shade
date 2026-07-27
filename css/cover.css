@@ -116,3 +116,26 @@ body{
     color:#6A5A49;
 
 }
+/* ==========================================
+   PORTRAIT
+========================================== */
+
+.cover-portrait{
+
+    margin-top:3rem;
+
+}
+
+.cover-portrait img{
+
+    width:320px;
+
+    max-width:85%;
+
+    display:block;
+
+    margin:0 auto;
+
+    box-shadow:0 12px 28px rgba(0,0,0,.18);
+
+}
