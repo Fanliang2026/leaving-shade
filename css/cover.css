@@ -140,3 +140,46 @@ body{
  
 
 }
+/* ==========================================
+   OPEN BOOK BUTTON
+========================================== */
+
+.cover-button{
+
+    margin-top:3.5rem;
+
+    margin-bottom:4rem;
+
+}
+
+.open-book{
+
+    display:inline-block;
+
+    padding:.85rem 2.8rem;
+
+    text-decoration:none;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:1.2rem;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    color:#4E4032;
+
+    border:1px solid rgba(78,64,50,.45);
+
+    transition:.35s ease;
+
+}
+
+.open-book:hover{
+
+    background:rgba(78,64,50,.08);
+
+    color:#2F241B;
+
+}
