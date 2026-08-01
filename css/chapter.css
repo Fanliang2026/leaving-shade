@@ -1,32 +1,83 @@
+
+/* ==========================================
+   CHAPTER PAGE
+========================================== */
+
 body{
 
-    background:red !important;
+    margin:0;
+
+    background:#F5F3ED;
+
+    font-family:"Cormorant Garamond",serif;
+
+    color:#3E3126;
 
 }
-<main class="chapter">
 
-    <section class="chapter-opening">
+/* ==========================================
+   CHAPTER OPENING
+========================================== */
 
-        <h2 class="chapter-number">
+.chapter-opening{
 
-            Chapter One
+    min-height:100vh;
 
-        </h2>
+    display:flex;
 
-        <h1 class="chapter-title">
+    flex-direction:column;
 
-            The Little Courtyard
+    justify-content:center;
 
-        </h1>
+    align-items:center;
 
-        <div class="chapter-photo">
+    text-align:center;
 
-            <img src="images/chapter1-photo.jpg"
-                 alt="Chapter One">
+    padding:3rem 2rem;
 
-        </div>
+}
 
-    </section>
+.chapter-number{
+
+    font-size:1.25rem;
+
+    font-weight:400;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+    margin:0;
+
+}
+
+.chapter-title{
+
+    margin-top:1rem;
+
+    font-size:clamp(2.4rem,5vw,3.6rem);
+
+    font-weight:400;
+
+}
+
+.chapter-photo{
+
+    margin-top:4rem;
+
+}
+
+.chapter-photo img{
+
+    max-width:700px;
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+}
 
     <section class="chapter-content">
 
