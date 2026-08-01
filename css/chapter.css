@@ -1,1 +1,30 @@
+<main class="chapter">
 
+    <section class="chapter-opening">
+
+        <h2 class="chapter-number">
+
+            Chapter One
+
+        </h2>
+
+        <h1 class="chapter-title">
+
+            The Little Courtyard
+
+        </h1>
+
+        <div class="chapter-photo">
+
+            <img src="images/chapter1-photo.jpg"
+                 alt="Chapter One">
+
+        </div>
+
+    </section>
+
+    <section class="chapter-content">
+
+    </section>
+
+</main>
