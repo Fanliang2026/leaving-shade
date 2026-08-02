@@ -53,7 +53,10 @@ body{
 
 .chapter-title{
 
-    margin-top:1rem;
+   
+    max-width: 900px;
+
+    margin: 0 auto;
 
     font-size:clamp(2.4rem,5vw,3.6rem);
 
