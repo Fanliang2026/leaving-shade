@@ -84,3 +84,34 @@ body{
     </section>
 
 </main>
+/* ==========================================
+   CHAPTER READING
+========================================== */
+
+.chapter-reading{
+
+    padding:8rem 2rem 10rem;
+
+}
+
+.reading-content{
+
+    width:min(90%,720px);
+
+    margin:0 auto;
+
+    font-size:1.45rem;
+
+    line-height:2.15;
+
+    color:#3E3126;
+
+}
+
+.reading-content p{
+
+    margin:0 0 2rem 0;
+
+    text-indent:2em;
+
+}
