@@ -162,3 +162,18 @@ body{
     max-width:70%;
 
 }
+.chapter-ending{
+
+    text-align:center;
+
+    margin:8rem 0 6rem;
+
+}
+
+.chapter-ending img{
+
+    width:110px;
+
+    opacity:0.9;
+
+}
