@@ -166,13 +166,19 @@ body{
 
     text-align:center;
 
-    margin:8rem 0 6rem;
+    margin:7rem auto 5rem;
 
 }
 
 .chapter-ending img{
 
-    width:110px;
+    width:90px;
+
+    height:auto;
+
+    display:block;
+
+    margin:0 auto;
 
     opacity:0.9;
 
