@@ -144,3 +144,17 @@ body{
     color:#7A6B5A;
 
 }
+
+.chapter-quote{
+
+    margin:2.5rem auto;
+
+    text-align:center;
+
+    font-style:italic;
+
+    font-size:1.15rem;
+
+    color:#5E5045;
+
+}
