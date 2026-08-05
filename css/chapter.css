@@ -183,6 +183,12 @@ body{
     opacity:0.9;
 
 }
+.chapter-ending .final-tree {
+    width:420px;
+    max-width:80%;
+    height:auto;
+}
+
 .closing-line {
     margin-top: 3rem;
 }
