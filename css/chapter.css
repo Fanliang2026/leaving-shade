@@ -186,3 +186,9 @@ body{
 .closing-line {
     margin-top: 3rem;
 }
+
+.final-tree{
+    width:420px;
+    max-width:80%;
+    height:auto;
+}
