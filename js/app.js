@@ -11,7 +11,7 @@
 
 const quote =
 
-"The tree may fall. But the shade it provided will continue to shelter those who come after.";
+"She grew from poor and difficult soil,......" ;
 
 
 
