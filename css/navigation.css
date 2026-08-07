@@ -116,7 +116,7 @@
 
     right:-420px;
 
-    width:360px;
+    width:420px;
 
     max-width:90%;
 
@@ -142,6 +142,139 @@
 
 }
 
+/* ==========================================
+   Elegant Table of Contents
+========================================== */
+
+.toc-book-title{
+
+    margin:0;
+
+    text-align:center;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2rem;
+
+    font-weight:500;
+
+    color:#6d4c2c;
+
+}
+
+.toc-heading{
+
+    margin:10px 0 36px;
+
+    text-align:center;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    color:#9a7b56;
+
+}
+
+.toc-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.toc-divider{
+
+    margin:18px 0;
+
+    border-top:1px solid #d9ccb8;
+
+}
+
+.toc-entry{
+
+    display:block;
+
+    text-decoration:none;
+
+    padding:10px 12px;
+
+    border-radius:10px;
+
+    transition:.25s;
+
+}
+
+.toc-entry:hover{
+
+    background:#f3ece1;
+
+    transform:translateX(4px);
+
+}
+
+.toc-simple{
+
+    display:block;
+
+    font-size:1rem;
+
+    color:#4c4c4c;
+
+    font-weight:500;
+
+}
+
+.toc-chapter{
+
+    display:block;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:1.15rem;
+
+    font-weight:600;
+
+    color:#7d5532;
+
+}
+
+.toc-title{
+
+    display:block;
+
+    margin-top:2px;
+
+    font-size:.95rem;
+
+    line-height:1.45;
+
+    color:#666;
+
+}
+
+.toc-footer{
+
+    margin-top:34px;
+
+    padding-top:24px;
+
+    border-top:1px solid #d9ccb8;
+
+    text-align:center;
+
+    color:#9a7b56;
+
+    font-size:.9rem;
+
+}
 /* ---------- Debug ---------- */
 
 .toc-button{
