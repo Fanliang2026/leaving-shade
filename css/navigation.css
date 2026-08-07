@@ -1,1 +1,143 @@
+<!-- =========================================
+     TABLE OF CONTENTS
+========================================= -->
 
+<button id="tocButton" class="toc-button" aria-label="Table of Contents">
+
+    🌳
+
+</button>
+
+<div id="tocOverlay" class="toc-overlay"></div>
+
+<nav id="tocPanel" class="toc-panel">
+
+    <button id="tocClose" class="toc-close">
+
+        ×
+
+    </button>
+
+    <h1 class="toc-book-title">
+
+        Leaving Shade for Everyone
+
+    </h1>
+
+    <h2 class="toc-heading">
+
+        Contents
+
+    </h2>
+
+    <div class="toc-list">
+
+        <a href="cover.html">Cover</a>
+
+        <a href="preface.html">Preface</a>
+
+        <hr>
+
+        <a href="chapter.html#chapter1">
+            Chapter One
+        </a>
+
+        <a href="chapter.html#chapter2">
+            Chapter Two
+        </a>
+
+        <a href="chapter.html#chapter3">
+            Chapter Three
+        </a>
+
+        <a href="chapter.html#chapter4">
+            Chapter Four
+        </a>
+
+        <a href="chapter.html#chapter5">
+            Chapter Five
+        </a>
+
+        <a href="chapter.html#chapter6">
+            Chapter Six
+        </a>
+
+        <hr>
+
+        <a href="chapter.html#memorial">
+
+            In Memory
+
+        </a>
+
+    </div>
+
+</nav>
+
+/* ==========================================
+   Dark Overlay
+========================================== */
+
+.toc-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.28);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:2500;
+
+}
+
+.toc-overlay.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/* ==========================================
+   TOC Panel
+========================================== */
+
+.toc-panel{
+
+    position:fixed;
+
+    top:0;
+
+    right:-420px;
+
+    width:360px;
+
+    max-width:90%;
+
+    height:100vh;
+
+    background:#faf8f3;
+
+    box-shadow:-8px 0 30px rgba(0,0,0,.15);
+
+    padding:50px 34px;
+
+    transition:.35s;
+
+    z-index:2600;
+
+    overflow-y:auto;
+
+}
+
+.toc-panel.open{
+
+    right:0;
+
+}
