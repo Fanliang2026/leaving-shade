@@ -11,7 +11,8 @@
 
 const quote =
 
-"She grew from poor and difficult soil,..  ..  ..        yet she ......" ;
+"She grew from poor and difficult soil,..  ..  ..         yet she gave shade to everyone around her.
+" ;
 
 
 
