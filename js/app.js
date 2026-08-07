@@ -84,6 +84,8 @@ requestAnimationFrame(() => {
 
 });
 
+
+
 setTimeout(() => {
 
     typeQuote(quote, quoteText);
