@@ -34,3 +34,28 @@ document.querySelectorAll(".toc-list a").forEach(link => {
     link.addEventListener("click", closeTOC);
 
 });
+/* ==========================================
+   Highlight Current Chapter
+========================================== */
+
+function highlightCurrentChapter() {
+
+    const hash = window.location.hash.replace("#", "");
+
+    document.querySelectorAll(".toc-entry").forEach(entry => {
+
+        entry.classList.remove("active");
+
+        if (entry.dataset.chapter === hash) {
+
+            entry.classList.add("active");
+
+        }
+
+    });
+
+}
+
+window.addEventListener("load", highlightCurrentChapter);
+
+window.addEventListener("hashchange", highlightCurrentChapter);
