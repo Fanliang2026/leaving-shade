@@ -141,3 +141,27 @@
     right:0;
 
 }
+
+/* ---------- Debug ---------- */
+
+.toc-button{
+
+    position:fixed !important;
+
+    top:24px !important;
+
+    right:24px !important;
+
+    left:auto !important;
+
+    bottom:auto !important;
+
+    width:56px !important;
+
+    height:56px !important;
+
+    border-radius:50% !important;
+
+    z-index:99999 !important;
+
+}
