@@ -298,3 +298,31 @@
     z-index:99999 !important;
 
 }
+
+/* ==========================================
+   Current Chapter Highlight
+========================================== */
+
+.toc-entry.active{
+
+    border-left:3px solid #9a7b56;
+
+    padding-left:14px;
+
+    background:#f8f3ea;
+
+}
+
+.toc-entry.active .toc-chapter{
+
+    color:#6d4c2c;
+
+    font-weight:700;
+
+}
+
+.toc-entry.active .toc-title{
+
+    color:#444;
+
+}
