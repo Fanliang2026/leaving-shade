@@ -6,13 +6,41 @@ const tocButton = document.getElementById("tocButton");
 const tocPanel = document.getElementById("tocPanel");
 const tocOverlay = document.getElementById("tocOverlay");
 const tocClose = document.getElementById("tocClose");
+const tocBack = document.getElementById("tocBack");
+
+
+// ==========================================
+// Remember current reading position
+// ==========================================
+
+function saveReadingPosition() {
+
+    sessionStorage.setItem(
+        "leavingShadeReturnPage",
+        window.location.href
+    );
+
+    sessionStorage.setItem(
+        "leavingShadeReturnScroll",
+        window.scrollY
+    );
+
+}
+
+
+// ==========================================
+// Open / Close TOC
+// ==========================================
 
 function openTOC() {
+
+    saveReadingPosition();
 
     tocPanel.classList.add("open");
     tocOverlay.classList.add("show");
 
 }
+
 
 function closeTOC() {
 
@@ -21,41 +49,108 @@ function closeTOC() {
 
 }
 
+
+// ==========================================
+// TOC controls
+// ==========================================
+
 tocButton.addEventListener("click", openTOC);
 
 tocClose.addEventListener("click", closeTOC);
 
 tocOverlay.addEventListener("click", closeTOC);
 
-// Close after clicking any TOC link
+
+// ==========================================
+// Normal TOC links
+// ==========================================
 
 document.querySelectorAll(".toc-list a").forEach(link => {
 
     link.addEventListener("click", closeTOC);
 
 });
-/* ==========================================
-   Highlight Current Chapter
-========================================== */
 
-function highlightCurrentChapter() {
 
-    const hash = window.location.hash.replace("#", "");
+// ==========================================
+// Return to previous reading position
+// ==========================================
 
-    document.querySelectorAll(".toc-entry").forEach(entry => {
+if (tocBack) {
 
-        entry.classList.remove("active");
+    tocBack.addEventListener("click", function(event) {
 
-        if (entry.dataset.chapter === hash) {
+        event.preventDefault();
 
-            entry.classList.add("active");
+        const returnPage =
+            sessionStorage.getItem("leavingShadeReturnPage");
+
+        const returnScroll =
+            sessionStorage.getItem("leavingShadeReturnScroll");
+
+        if (!returnPage || returnScroll === null) {
+
+            closeTOC();
+
+            return;
 
         }
+
+        const currentPage =
+            window.location.href.split("#")[0];
+
+        const savedPage =
+            returnPage.split("#")[0];
+
+        // Same page:
+        if (currentPage === savedPage) {
+
+            closeTOC();
+
+            window.scrollTo({
+                top: Number(returnScroll),
+                behavior: "smooth"
+            });
+
+            return;
+
+        }
+
+        // Different page:
+        sessionStorage.setItem(
+            "leavingShadeRestore",
+            returnScroll
+        );
+
+        window.location.href = returnPage;
 
     });
 
 }
 
-window.addEventListener("load", highlightCurrentChapter);
 
-window.addEventListener("hashchange", highlightCurrentChapter);
+// ==========================================
+// Restore position after changing pages
+// ==========================================
+
+const restoreScroll =
+    sessionStorage.getItem("leavingShadeRestore");
+
+if (restoreScroll !== null) {
+
+    sessionStorage.removeItem("leavingShadeRestore");
+
+    window.addEventListener("load", function() {
+
+        setTimeout(function() {
+
+            window.scrollTo({
+                top: Number(restoreScroll),
+                behavior: "smooth"
+            });
+
+        }, 100);
+
+    });
+
+}
