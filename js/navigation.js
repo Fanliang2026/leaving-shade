@@ -10,50 +10,15 @@ const tocBack = document.getElementById("tocBack");
 
 
 // ==========================================
-// Remember current reading position
-// ==========================================
-
-function saveReadingPosition() {
-
-    // If we just arrived here by selecting a TOC destination,
-    // keep the original reading position.
-    const navigatingFromTOC =
-        sessionStorage.getItem("leavingShadeTOCNavigation");
-
-    if (navigatingFromTOC === "true") {
-
-        sessionStorage.removeItem("leavingShadeTOCNavigation");
-
-        return;
-
-    }
-
-    sessionStorage.setItem(
-        "leavingShadeReturnPage",
-        window.location.href
-    );
-
-    sessionStorage.setItem(
-        "leavingShadeReturnScroll",
-        window.scrollY
-    );
-
-}
-
-
-// ==========================================
 // Open / Close TOC
 // ==========================================
 
 function openTOC() {
 
-    saveReadingPosition();
-
     tocPanel.classList.add("open");
     tocOverlay.classList.add("show");
 
 }
-
 
 function closeTOC() {
 
@@ -61,11 +26,6 @@ function closeTOC() {
     tocOverlay.classList.remove("show");
 
 }
-
-
-// ==========================================
-// TOC controls
-// ==========================================
 
 tocButton.addEventListener("click", openTOC);
 
@@ -75,18 +35,27 @@ tocOverlay.addEventListener("click", closeTOC);
 
 
 // ==========================================
-// Normal TOC links
+// Save reading position BEFORE leaving
+// through a TOC link
 // ==========================================
 
 document.querySelectorAll(".toc-list a").forEach(link => {
 
     link.addEventListener("click", function() {
 
-        // Tell the next page that we arrived here
-        // through the TOC.
+        // Do not save the "Back to where I was" link.
+        if (this.id === "tocBack") {
+            return;
+        }
+
         sessionStorage.setItem(
-            "leavingShadeTOCNavigation",
-            "true"
+            "leavingShadeReturnPage",
+            window.location.href
+        );
+
+        sessionStorage.setItem(
+            "leavingShadeReturnScroll",
+            window.scrollY
         );
 
         closeTOC();
@@ -97,7 +66,7 @@ document.querySelectorAll(".toc-list a").forEach(link => {
 
 
 // ==========================================
-// Return to previous reading position
+// Back to where I was
 // ==========================================
 
 if (tocBack) {
@@ -112,6 +81,8 @@ if (tocBack) {
         const returnScroll =
             sessionStorage.getItem("leavingShadeReturnScroll");
 
+
+        // Nothing has been saved yet.
         if (!returnPage || returnScroll === null) {
 
             closeTOC();
@@ -120,6 +91,7 @@ if (tocBack) {
 
         }
 
+
         const currentPage =
             window.location.href.split("#")[0];
 
@@ -127,25 +99,35 @@ if (tocBack) {
             returnPage.split("#")[0];
 
 
+        // ------------------------------------------
         // Same page
+        // ------------------------------------------
+
         if (currentPage === savedPage) {
 
             closeTOC();
 
-            window.scrollTo({
+            setTimeout(function() {
 
-                top: Number(returnScroll),
+                window.scrollTo({
 
-                behavior: "smooth"
+                    top: Number(returnScroll),
 
-            });
+                    behavior: "smooth"
+
+                });
+
+            }, 100);
 
             return;
 
         }
 
 
+        // ------------------------------------------
         // Different page
+        // ------------------------------------------
+
         sessionStorage.setItem(
             "leavingShadeRestore",
             returnScroll
@@ -159,7 +141,7 @@ if (tocBack) {
 
 
 // ==========================================
-// Restore position after changing pages
+// Restore position after returning to a page
 // ==========================================
 
 const restoreScroll =
@@ -181,7 +163,7 @@ if (restoreScroll !== null) {
 
             });
 
-        }, 100);
+        }, 200);
 
     });
 
