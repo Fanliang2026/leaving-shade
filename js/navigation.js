@@ -15,6 +15,19 @@ const tocBack = document.getElementById("tocBack");
 
 function saveReadingPosition() {
 
+    // If we just arrived here by selecting a TOC destination,
+    // keep the original reading position.
+    const navigatingFromTOC =
+        sessionStorage.getItem("leavingShadeTOCNavigation");
+
+    if (navigatingFromTOC === "true") {
+
+        sessionStorage.removeItem("leavingShadeTOCNavigation");
+
+        return;
+
+    }
+
     sessionStorage.setItem(
         "leavingShadeReturnPage",
         window.location.href
@@ -67,7 +80,18 @@ tocOverlay.addEventListener("click", closeTOC);
 
 document.querySelectorAll(".toc-list a").forEach(link => {
 
-    link.addEventListener("click", closeTOC);
+    link.addEventListener("click", function() {
+
+        // Tell the next page that we arrived here
+        // through the TOC.
+        sessionStorage.setItem(
+            "leavingShadeTOCNavigation",
+            "true"
+        );
+
+        closeTOC();
+
+    });
 
 });
 
@@ -102,21 +126,26 @@ if (tocBack) {
         const savedPage =
             returnPage.split("#")[0];
 
-        // Same page:
+
+        // Same page
         if (currentPage === savedPage) {
 
             closeTOC();
 
             window.scrollTo({
+
                 top: Number(returnScroll),
+
                 behavior: "smooth"
+
             });
 
             return;
 
         }
 
-        // Different page:
+
+        // Different page
         sessionStorage.setItem(
             "leavingShadeRestore",
             returnScroll
@@ -145,8 +174,11 @@ if (restoreScroll !== null) {
         setTimeout(function() {
 
             window.scrollTo({
+
                 top: Number(restoreScroll),
+
                 behavior: "smooth"
+
             });
 
         }, 100);
