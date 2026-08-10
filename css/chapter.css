@@ -289,7 +289,7 @@ body{
 
 .supplementary-header,
 .supplementary-content {
-    max-width: 900px;
+    max-width: 760px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -299,7 +299,9 @@ body{
 }
 
 .supplementary-content {
+    max-width: 760px;
     padding: 0 2rem 5rem;
+    font-size: 1.1rem;
 }
 
 .supplementary-content > p {
@@ -321,7 +323,7 @@ body{
 }
 
 .behind-story-entry p {
-    line-height: 1.8;
+    line-height: 1.85;
     margin-bottom: 1.25rem;
 }
 
