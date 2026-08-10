@@ -301,7 +301,7 @@ body{
 .supplementary-content {
     max-width: 760px;
     padding: 0 2rem 5rem;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
 }
 
 .supplementary-content > p {
@@ -323,7 +323,7 @@ body{
 }
 
 .behind-story-entry p {
-    line-height: 1.85;
+    line-height: 1.9;
     margin-bottom: 1.25rem;
 }
 
