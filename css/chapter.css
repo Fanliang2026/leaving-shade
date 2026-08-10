@@ -283,3 +283,56 @@ body{
 
 }
 
+/* --------------------------------
+   The World Behind the Story
+   -------------------------------- */
+
+.supplementary-header,
+.supplementary-content {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.supplementary-header {
+    padding: 4rem 2rem 1.5rem;
+}
+
+.supplementary-content {
+    padding: 0 2rem 5rem;
+}
+
+.supplementary-content > p {
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+.behind-story-entry {
+    margin-bottom: 4rem;
+}
+
+.behind-story-entry h2 {
+    margin-bottom: 0.75rem;
+}
+
+.chinese-term {
+    margin-top: -0.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.behind-story-entry p {
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+}
+
+.opera-character {
+    margin-top: 2.5rem;
+}
+
+.opera-character h3 {
+    margin-bottom: 0.75rem;
+}
+
+.opera-character p {
+    margin-bottom: 1.25rem;
+}
