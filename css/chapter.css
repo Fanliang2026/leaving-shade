@@ -338,3 +338,25 @@ body{
 .opera-character p {
     margin-bottom: 1.25rem;
 }
+
+/* --------------------------------
+   The World Behind the Story
+   Single reading column
+   -------------------------------- */
+
+.supplementary-page {
+    column-count: 1;
+    column-width: auto;
+    columns: auto;
+}
+
+.supplementary-page .supplementary-content {
+    column-count: 1;
+    column-width: auto;
+    columns: auto;
+}
+
+.supplementary-page .behind-story-entry {
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
