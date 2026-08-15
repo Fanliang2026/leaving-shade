@@ -216,10 +216,16 @@
     height:56px !important;
 
     border-radius:50% !important;
+------enlarge 🌳----------------------
+    font-size: 40px !important; 
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 
-    font-size: 40px !important;
-
-    z-index:99999 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+-------------------------------------  
+   z-index:99999 !important;
 
 }
 
