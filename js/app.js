@@ -11,7 +11,7 @@
 
 const quote =
 
-"She grew from poor and difficult soil,... ...               yet she gave shade to everyone around her." ;
+"She grew from poor and difficult soil,... ...               yet she gave shade to everyone around her.                The tree may fall.           But the shade it provided will continue to shelter those who come after." ;
 
 
 
